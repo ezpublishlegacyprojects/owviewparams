@@ -1,0 +1,62 @@
+-------------------------
+owViewParams :
+-------------------------
+owViewParams is a template operator which help you to manage url and view_parameters.
+owViewParams generates a new url with all view_parameters you want to preserve, modify, and remove.
+
+
+Three values are enabled :
+	'modify' : used to modify view_parameters values. If a view_parameter doesn't exists, it will be created.
+	'only' : used to keep only specified view_parameters (added to 'modify' view_parameters)
+	'exclude' : used to remove specified view_parameters (except 'modify' view_parameters)
+
+
+-------------------------
+Author
+-------------------------
+Simon Boyer
+
+
+-------------------------
+Installation instructions
+-------------------------
+
+1) If it does not exist, create a directory named "extension" in the base ezpublish directory.
+
+
+2) Unpack the ZIP file and copy the directory "owviewparams" to the extension directory.
+
+
+3) Activate extension :
+---------------------------------
+Add the following to your settings/override/site.ini.append.php file:
+[ExtensionSettings]
+ActiveExtensions[]=owviewparams
+
+	OR
+
+In administrator user interface, click 'setup' tab->'extensions' menu, select 'owviewparams', click button 'Apply Changes'
+
+
+
+4) Regenerate autoloads :
+---------------------------------
+In administrator user interface, click 'setup' tab->'extensions' menu, click button 'Regenerate autoload arrays for extensions'
+
+	OR
+	
+in eZ Publish installation folder, run "php bin/php/ezpgenerateautoloads.php -e"
+
+
+
+5) Clear cache
+---------------------------------
+Clear INI and template caches. (from admin 'Setup' tab or commandline)
+
+
+
+---------------------------------------------
+Hope you find it useful! 
+
+Simon Boyer
+
