@@ -73,7 +73,7 @@ class owviewparams
 				}
 				
 				foreach ($namedParameters['view_parameters'] as $key => $value) {
-					if (!(in_array($key, $exclude) || !$value || in_array($key, $keys) || ($value && count($only) && !in_array($key, $only)) ))
+					if (!(in_array($key, $exclude) || in_array($key, $keys) || ($value && count($only) && !in_array($key, $only)) ))
 						$output .= '/('.$key.')/'.$value;
 				}
 				
