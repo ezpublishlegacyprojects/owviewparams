@@ -75,7 +75,7 @@ class owviewparams
 				}
 				if(count($namedParameters['view_parameters'])>0) {
 					foreach ($namedParameters['view_parameters'] as $key => $value) {
-						if (!(in_array($key, $exclude) || $value==='' || $value===null || $value===false || in_array($key, $keys) || ($value && count($only) && !in_array($key, $only)) ))
+						if (!(in_array($key, $exclude) || $value==='' || $value===null || $value===false || in_array($key, $keys) || (count($only) && !in_array($key, $only)) ))
 							$output .= '/('.$key.')/'.$value;
 					}
 				}
